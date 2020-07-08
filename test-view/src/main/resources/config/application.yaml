@@ -1,0 +1,13 @@
+server:
+  port: 80
+spring:
+  application:
+    name: test-view
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: HTML
+    cache: false
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+zhouyf: TEST

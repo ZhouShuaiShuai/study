@@ -1,0 +1,22 @@
+server:
+  port: 9022
+spring:
+  application:
+    name: redis-util
+  redis:
+    cluster:
+      nodes: 10.172.246.231:33331,10.172.246.232:33332,10.172.246.233:33333,10.172.246.231:33334,10.172.246.232:33335,10.172.246.233:33336
+#      nodes: 10.172.246.227:7001,10.172.246.227:7002,10.172.246.227:7003,10.172.246.227:7004,10.172.246.227:7005,10.172.246.227:7006
+      max-redirects: 5
+    lettuce:
+      pool:
+        max-wait: 20000
+        max-active: 20
+        max-idle: 30
+        min-idle: 0
+    jedis:
+      pool:
+        max-wait: 20000
+        max-active: 20
+        max-idle: 30
+        min-idle: 0

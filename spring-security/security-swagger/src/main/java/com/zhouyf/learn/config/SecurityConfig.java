@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      * 密码加密方式
      */
     @Bean
-    public PasswordEncoder bCryptPasswordEncoder(){
+    public PasswordEncoder bCryptPasswordEncoder() {
 //        return new BCryptPasswordEncoder();
         return NoOpPasswordEncoder.getInstance();
     }
@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.
                 //允许基于使用HttpServletRequest限制访问
-                authorizeRequests()
+                        authorizeRequests()
 
                 // 设置不需要授权的请求
                 .antMatchers("/login.html").permitAll()

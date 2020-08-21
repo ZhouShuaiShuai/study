@@ -11,7 +11,12 @@
 
     <artifactId>spring-security</artifactId>
     <description>Spring Security项目</description>
+    <modules>
+        <module>securing-web</module>
+        <module>security-swagger</module>
+    </modules>
     <name>spring-security</name>
+    <packaging>pom</packaging>
 
     <dependencies>
         <!--添加Web依赖(servlet) -->
@@ -24,6 +29,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
